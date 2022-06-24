@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script >
+        //chuoi
+function capitaliza(str){
+    let strr = str.trim();// loại bỏ khoảng trắng ở 2 đầu
+
+     strr = strr.charAt(0).toUpperCase() + strr.slice(1);// lấy ra ký tự ở vị trí n rồi viết hoa sau đó nối lại với chuỗi 
+    console.log(strr)
+}
+capitaliza("hello ")
+//bai 2
+
+ function title(str) {
+   
+   let ssr = str.toLowerCase().split(" ");// Tdùng split để tách chuỗi (dấu phân cách, số chuỗi )
+
+   
+   for (let i = 0; i < ssr.length; i++) {// Tạo vòng lặp và viết hoa chữ cái đầu tiên 
+     ssr[i] = ssr[i][0].toUpperCase() + ssr[i].slice(1);
+   }
+   
+   return ssr.join(" ");// Nối các từ, cụm từ đã xử lý ở trên và trả về kết quả
+}
+console.log(title("Phạm ngọc hải"))
+//bai 3Viết hàm protectEmail(email) nhận vào một chuỗi là địa chỉ email, trả về chuỗi email dạng
+//rút gọn, chỉ hiển thị 2 ký tự đầu và thay thế các ký tự khác trước @ dấu ...
+function protectEmail(email) {
+        
+        let a = email.slice(0, 2);
+
+        let b = "...";
+
+        
+        let c = email.slice(email.length-10);
+
+        
+        console.log(a + b + c);
+}
+protectEmail("haikt@gmail.com")
+//bài 4 đảo ngược chuỗi
+function reverse(str) {
+    str = str.split(" ").join("").split("").reverse().join("");
+    console.log(str)
+}
+reverse("hello")
+//bai 5
+function countVowel(str) {
+  var vowel_list = "aeiou";
+  var vcount = 0;
+
+  for (let x = 0; x < str.length; x++) {
+    if (vowel_list.indexOf(str[x]) !== -1) {
+      vcount++
+    }
+  }
+  return vcount;
+}
+console.log(countVowel("hello"))
+//bai 6
+function reverseWords(str) {
+  str = str.split(" ").reverse().join(" ");
+  console.log(str);
+}
+reverseWords("Phạm Ngọc Hải");
+//bai 7
+//bai 8
+function parameterize(str) {
+  str = str.toLowerCase().split(" ").join("-");
+
+  console.log(str);
+}
+parameterize("Phạm Ngọc hải")
+//bai 9
+function isPalindrome(str) {
+    let str1 = str.toLowerCase().split(" ").join("");
+    let sstr = str.toLowerCase().split(" ").join("").split("").reverse().join("");
+    if (sstr === str1) {
+        console.log(true)
+    } else console.log(false)
+   
+
+}
+isPalindrome("Ha h")
+isPalindrome("Ha ih");
+    </script>
+</body>
+</html>
